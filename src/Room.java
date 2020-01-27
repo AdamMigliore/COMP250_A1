@@ -44,16 +44,18 @@ public class Room {
 	public void changeAvailability() {
 		available = !available;
 	}
-
-	// Legal for private method but idk if it will work
+	
+	//idk if needed
+	/*
 	private boolean isAvailable() {
 		return available;
 	}
+	*/
 
 	public static Room findAvailableRoom(Room[] rooms, String type) {
 		for (int i = 0; i < rooms.length; i++) {
 			// IDK if it will work with isAvailable
-			if (type.equalsIgnoreCase(rooms[i].getType()) && rooms[i].isAvailable()) {
+			if (type.equalsIgnoreCase(rooms[i].getType()) && rooms[i].available) {
 				return rooms[i];
 			}
 		}
@@ -62,7 +64,8 @@ public class Room {
 
 	public static boolean makeRoomAvailable(Room[] rooms, String type) {
 		for (int i = 0; i < rooms.length; i++) {
-			if (type.equalsIgnoreCase(rooms[i].getType()) && !rooms[i].isAvailable()) {
+			// IDK if it will work with isAvailable
+			if (type.equalsIgnoreCase(rooms[i].getType()) && !rooms[i].available) {
 				rooms[i].changeAvailability();
 				return true;
 			}

@@ -117,7 +117,7 @@ public class SyntaxTester {
                  "public static boolean " + packageName + "Room.makeRoomAvailable(" + packageName + "Room[],java.lang.String)",
                  "public static " + packageName + "Room "  + packageName + "Room.findAvailableRoom(" + packageName + "Room[],java.lang.String)"
                  ) );
-         ArrayList<String> correctConstNamesRoom = new ArrayList<String>(Arrays.asList( "public " + packageName + "Room(java.lang.String)" ));
+         ArrayList<String> correctConstNamesRoom = new ArrayList<String>(Arrays.asList( "public " + packageName + "Room(java.lang.String)", "public " + packageName + "Room(" + packageName + "Room)" ));
          testFnNames(packageName + "Room", correctFnNamesRoom, correctConstNamesRoom);
 
          //Class - Hotel
@@ -156,7 +156,7 @@ public class SyntaxTester {
          
          //Class - HotelReservation
          ArrayList<String> correctFnNamesHotelReservation = new ArrayList<String>( Arrays.asList(
-                 "protected int " + packageName + "HotelReservation.getNumOfNights()",
+                 "public int " + packageName + "HotelReservation.getNumOfNights()",
            "public int " + packageName + "HotelReservation.getCost()",
                  "public boolean " + packageName + "HotelReservation.equals(java.lang.Object)"
                  ) );
