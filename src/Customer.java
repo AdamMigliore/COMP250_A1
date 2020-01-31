@@ -63,6 +63,7 @@ public class Customer {
 			balance = balance - myBasket.getTotalCost();
 			myBasket.clear();
 		}
+		System.out.println("balance: "+balance);
 		return balance;
 	}
 
