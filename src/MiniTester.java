@@ -1,3 +1,5 @@
+
+
 import java.lang.reflect.Field;
 
 public class MiniTester 
@@ -285,8 +287,8 @@ public class MiniTester
 			Airport a1 = new Airport(4, 30000, 20000);
 			Airport a2 = new Airport(7, 80000, 30000);
 			FlightReservation f1 = new FlightReservation("myFlight", a1, a2);
-			int cost = f1.getCost();	//should be 50424 by hard coding the calculation
-			if (cost == 50424) grade += 4;
+			int cost = f1.getCost();	// should be 92387 by hard coding the calculation
+			if (cost == 92387) grade += 4;
 			else {
 				comment = comment + "Error: getCost in FlightReservation isn't calculated correctly.\n";
 			}
@@ -557,10 +559,9 @@ public class MiniTester
 			
 			c1.addToBasket(r1);
 			c1.addToBasket(r2);
-			System.out.println("r1:" + r1.getCost() + "r2:" + r2.getCost());
-			//total cost of basket is 80552
-			int remaining = c1.checkOut();		//remaining should = 20000000 - 80552 = 19919448
-			if (remaining == 19919448) grade += 1;
+			//total cost of basket is 135166
+			int remaining = c1.checkOut();		//remaining should = 20000000 - 135166 = 19864834
+			if (remaining == 19864834) grade += 1;
 			else {
 				comment = comment + "Error: when checking out the remaining balance returned is incorrect.\n";
 			}

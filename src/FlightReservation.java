@@ -21,8 +21,6 @@ public class FlightReservation extends Reservation {
 		double fuelCost = gallons * CENTS_PER_GALLON;
 		int totalCost = (int) Math.ceil(FIXED_COST + departure.getFees() + arrival.getFees() + fuelCost);
 
-		System.out.println(" Gallons: " + gallons + " fuelCost: " + fuelCost + " departure fee: " + departure.getFees()
-				+ " arrival fee: " + arrival.getFees() + " fixed cost: " + FIXED_COST + " = " + totalCost);
 		return totalCost;
 	}
 
