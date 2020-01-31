@@ -557,6 +557,7 @@ public class MiniTester
 			
 			c1.addToBasket(r1);
 			c1.addToBasket(r2);
+			System.out.println("r1:" + r1.getCost() + "r2:" + r2.getCost());
 			//total cost of basket is 80552
 			int remaining = c1.checkOut();		//remaining should = 20000000 - 80552 = 19919448
 			if (remaining == 19919448) grade += 1;
